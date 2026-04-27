@@ -28,7 +28,7 @@ public class Experiment {
         int[] sizes = {10, 100, 1000};
 
         System.out.println("Результаты экспериментов");
-        System.out.printf("%-15s | %-10s | %-15s | %-15s%n", "Тип данных", "Размер", "Bubble (нс)", "Merge (нс)");
+        System.out.printf("%-15s | %-10s | %-15s | %-15s%n", "Тип данных", "Размер", "Bubble", "Merge");
 
         for (int size : sizes) {
             int[] randomArray = sorter.generateRandomArray(size);
@@ -47,6 +47,6 @@ public class Experiment {
         System.out.println("\nТест поиска (Linear Search)");
         int[] searchArray = sorter.generateRandomArray(1000);
         long searchTime = measureSearchTime(searchArray, -1);
-        System.out.println("Время линейного поиска для 1000 элементов: " + searchTime + " нс");
+        System.out.println("Время линейного поиска для 1000 элементов: " + searchTime);
     }
 }
